@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308A739DEC65DC2E8615F931 /* libPods-HFFTDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */; };
+		67649F4FF14B8E0AA9B31B9E /* libPods-HFFTDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF9ECF8C877DC0CDA23447C /* libPods-HFFTDemo.a */; };
 		6AE9442C1FDA810F000A3BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9442B1FDA810F000A3BFC /* AppDelegate.m */; };
 		6AE9442F1FDA810F000A3BFC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9442E1FDA810F000A3BFC /* MasterViewController.m */; };
 		6AE944321FDA810F000A3BFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944311FDA810F000A3BFC /* DetailViewController.m */; };
@@ -16,6 +18,8 @@
 		6AE9443D1FDA810F000A3BFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9443C1FDA810F000A3BFC /* main.m */; };
 		6AE944471FDA810F000A3BFC /* HFFTDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944461FDA810F000A3BFC /* HFFTDemoTests.m */; };
 		6AE944521FDA810F000A3BFC /* HFFTDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944511FDA810F000A3BFC /* HFFTDemoUITests.m */; };
+		6AE944621FDA8857000A3BFC /* ASNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944601FDA8857000A3BFC /* ASNetworkingTools.m */; };
+		F3B2AB0B1CADC875E9CC6F92 /* libPods-HFFTDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA60776C5F10870F3A839B1 /* Pods-HFFTDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5DF9ECF8C877DC0CDA23447C /* libPods-HFFTDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE944271FDA810F000A3BFC /* HFFTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFFTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE9442A1FDA810F000A3BFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AE9442B1FDA810F000A3BFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +61,14 @@
 		6AE9444D1FDA810F000A3BFC /* HFFTDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HFFTDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE944511FDA810F000A3BFC /* HFFTDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFFTDemoUITests.m; sourceTree = "<group>"; };
 		6AE944531FDA810F000A3BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AE944601FDA8857000A3BFC /* ASNetworkingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNetworkingTools.m; sourceTree = "<group>"; };
+		6AE944611FDA8857000A3BFC /* ASNetworkingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASNetworkingTools.h; sourceTree = "<group>"; };
+		88FBA73BCA0B61F58EAA00DC /* Pods-HFFTDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9440DE4B1CA03D79110B7B89 /* Pods-HFFTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2939CFE44018CFA60849BF4 /* Pods-HFFTDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C2C83BBDF42AE8221F491AF9 /* Pods-HFFTDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoUITests/Pods-HFFTDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F1987A4CAFDF0740B657EC04 /* Pods-HFFTDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoUITests/Pods-HFFTDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67649F4FF14B8E0AA9B31B9E /* libPods-HFFTDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B2AB0B1CADC875E9CC6F92 /* libPods-HFFTDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308A739DEC65DC2E8615F931 /* libPods-HFFTDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +106,8 @@
 				6AE944451FDA810F000A3BFC /* HFFTDemoTests */,
 				6AE944501FDA810F000A3BFC /* HFFTDemoUITests */,
 				6AE944281FDA810F000A3BFC /* Products */,
+				FA709DF8D43A5492C5591257 /* Pods */,
+				BF6F6E364FCB3FE00F286427 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +124,7 @@
 		6AE944291FDA810F000A3BFC /* HFFTDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6AE9445F1FDA8857000A3BFC /* Common */,
 				6AE9442A1FDA810F000A3BFC /* AppDelegate.h */,
 				6AE9442B1FDA810F000A3BFC /* AppDelegate.m */,
 				6AE9442D1FDA810F000A3BFC /* MasterViewController.h */,
@@ -137,6 +158,38 @@
 			path = HFFTDemoUITests;
 			sourceTree = "<group>";
 		};
+		6AE9445F1FDA8857000A3BFC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6AE944601FDA8857000A3BFC /* ASNetworkingTools.m */,
+				6AE944611FDA8857000A3BFC /* ASNetworkingTools.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BF6F6E364FCB3FE00F286427 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9ECF8C877DC0CDA23447C /* libPods-HFFTDemo.a */,
+				36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */,
+				9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA709DF8D43A5492C5591257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2939CFE44018CFA60849BF4 /* Pods-HFFTDemo.debug.xcconfig */,
+				9440DE4B1CA03D79110B7B89 /* Pods-HFFTDemo.release.xcconfig */,
+				88FBA73BCA0B61F58EAA00DC /* Pods-HFFTDemoTests.debug.xcconfig */,
+				5DA60776C5F10870F3A839B1 /* Pods-HFFTDemoTests.release.xcconfig */,
+				F1987A4CAFDF0740B657EC04 /* Pods-HFFTDemoUITests.debug.xcconfig */,
+				C2C83BBDF42AE8221F491AF9 /* Pods-HFFTDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AE944561FDA810F000A3BFC /* Build configuration list for PBXNativeTarget "HFFTDemo" */;
 			buildPhases = (
+				206C7E2651B6BA49424787F4 /* [CP] Check Pods Manifest.lock */,
 				6AE944231FDA810F000A3BFC /* Sources */,
 				6AE944241FDA810F000A3BFC /* Frameworks */,
 				6AE944251FDA810F000A3BFC /* Resources */,
+				86C9DFE7F6CE7FD55A75D95E /* [CP] Embed Pods Frameworks */,
+				CC952F9F03C746BFEEBDB505 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AE944591FDA810F000A3BFC /* Build configuration list for PBXNativeTarget "HFFTDemoTests" */;
 			buildPhases = (
+				A7E1F26338416767AD4780A8 /* [CP] Check Pods Manifest.lock */,
 				6AE9443E1FDA810F000A3BFC /* Sources */,
 				6AE9443F1FDA810F000A3BFC /* Frameworks */,
 				6AE944401FDA810F000A3BFC /* Resources */,
+				371E160E60CDD0AB516A8991 /* [CP] Embed Pods Frameworks */,
+				E6B57B24543699BC4DC5E85B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AE9445C1FDA810F000A3BFC /* Build configuration list for PBXNativeTarget "HFFTDemoUITests" */;
 			buildPhases = (
+				6A7CEEF0137CCC9B8DB84CE4 /* [CP] Check Pods Manifest.lock */,
 				6AE944491FDA810F000A3BFC /* Sources */,
 				6AE9444A1FDA810F000A3BFC /* Frameworks */,
 				6AE9444B1FDA810F000A3BFC /* Resources */,
+				9766E5CE306D32A63BA7FBD0 /* [CP] Embed Pods Frameworks */,
+				20A6D1CCB5C6FC8E6B44D9C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +327,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		206C7E2651B6BA49424787F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HFFTDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20A6D1CCB5C6FC8E6B44D9C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemoUITests/Pods-HFFTDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		371E160E60CDD0AB516A8991 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A7CEEF0137CCC9B8DB84CE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HFFTDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86C9DFE7F6CE7FD55A75D95E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9766E5CE306D32A63BA7FBD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemoUITests/Pods-HFFTDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7E1F26338416767AD4780A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HFFTDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC952F9F03C746BFEEBDB505 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B57B24543699BC4DC5E85B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AE944231FDA810F000A3BFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -274,6 +483,7 @@
 				6AE9442C1FDA810F000A3BFC /* AppDelegate.m in Sources */,
 				6AE9443D1FDA810F000A3BFC /* main.m in Sources */,
 				6AE944321FDA810F000A3BFC /* DetailViewController.m in Sources */,
+				6AE944621FDA8857000A3BFC /* ASNetworkingTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +644,7 @@
 		};
 		6AE944571FDA810F000A3BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2939CFE44018CFA60849BF4 /* Pods-HFFTDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +659,7 @@
 		};
 		6AE944581FDA810F000A3BFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9440DE4B1CA03D79110B7B89 /* Pods-HFFTDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,6 +674,7 @@
 		};
 		6AE9445A1FDA810F000A3BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88FBA73BCA0B61F58EAA00DC /* Pods-HFFTDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -477,6 +690,7 @@
 		};
 		6AE9445B1FDA810F000A3BFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA60776C5F10870F3A839B1 /* Pods-HFFTDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +706,7 @@
 		};
 		6AE9445D1FDA810F000A3BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1987A4CAFDF0740B657EC04 /* Pods-HFFTDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39R6VHSDLS;
@@ -506,6 +721,7 @@
 		};
 		6AE9445E1FDA810F000A3BFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C83BBDF42AE8221F491AF9 /* Pods-HFFTDemoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39R6VHSDLS;
