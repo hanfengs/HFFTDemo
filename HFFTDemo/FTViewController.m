@@ -8,6 +8,7 @@
 
 #import "FTViewController.h"
 #import "FTMainController.h"
+#import "ASNetworkingTools.h"
 
 @interface FTViewController ()
 
@@ -22,8 +23,15 @@
 
 - (IBAction)clickBtn_login:(UIButton *)sender {
     
-    FTMainController *mainVC = [[FTMainController alloc] init];
-    [self.navigationController pushViewController:mainVC animated:YES];
+    NSDictionary *parameterDic = @{@"phone":@"18102029719",@"pwd":@"123456"};
+    
+    [[ASNetworkingTools sharedTools] requestWithMethod:POST URLString:@"http://vip.quxueabc.com/quxue/login/" parameters:parameterDic finished:^(id result, NSError *error) {
+        
+        NSLog(@"===%@===%@",result, result[@"code"]);
+    }];
+    
+//    FTMainController *mainVC = [[FTMainController alloc] init];
+//    [self.navigationController pushViewController:mainVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
