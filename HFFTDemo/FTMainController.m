@@ -37,10 +37,11 @@
         FTInfoModel *data = [FTInfoModel modelWithJSON:result];
         
         NSLog(@"===%@===%@", data.student.name, result[@"code"]);
-        NSInteger code = [result[@"code"] integerValue];
+//        NSInteger code = [result[@"code"] integerValue];
         
+        NSInteger code = [data.code integerValue];
         if (code == 0) {
-            
+        
             self.title = data.student.english_name;
             
         }else if (code == 1001){

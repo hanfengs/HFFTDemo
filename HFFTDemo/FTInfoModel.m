@@ -10,13 +10,11 @@
 #import <YYKit/YYKit.h>
 
 @implementation FTStudent
-
 @end
 
+
 @implementation FTInfoModel
-
-+ (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"student" : [FTStudent class]};
++ (NSDictionary *)modelContainerPropertyGenericClass {    
+    return @{@"courses" : [FTCourses class]};
 }
-
 @end
