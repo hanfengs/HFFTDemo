@@ -24,6 +24,7 @@
 		6AE9446B1FDBD6AF000A3BFC /* FTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944691FDBD6AF000A3BFC /* FTMainController.m */; };
 		6AE9446C1FDBD6AF000A3BFC /* FTMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE9446A1FDBD6AF000A3BFC /* FTMainController.xib */; };
 		6AE9446E1FDBDD22000A3BFC /* Reader.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE9446D1FDBDD22000A3BFC /* Reader.pdf */; };
+		6AE944711FDE2FCF000A3BFC /* FTInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944701FDE2FCF000A3BFC /* FTInfoModel.m */; };
 		F3B2AB0B1CADC875E9CC6F92 /* libPods-HFFTDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		6AE944691FDBD6AF000A3BFC /* FTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTMainController.m; sourceTree = "<group>"; };
 		6AE9446A1FDBD6AF000A3BFC /* FTMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTMainController.xib; sourceTree = "<group>"; };
 		6AE9446D1FDBDD22000A3BFC /* Reader.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Reader.pdf; sourceTree = "<group>"; };
+		6AE9446F1FDE2FCF000A3BFC /* FTInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTInfoModel.h; sourceTree = "<group>"; };
+		6AE944701FDE2FCF000A3BFC /* FTInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTInfoModel.m; sourceTree = "<group>"; };
 		88FBA73BCA0B61F58EAA00DC /* Pods-HFFTDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9440DE4B1CA03D79110B7B89 /* Pods-HFFTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				6AE944681FDBD6AF000A3BFC /* FTMainController.h */,
 				6AE944691FDBD6AF000A3BFC /* FTMainController.m */,
 				6AE9446A1FDBD6AF000A3BFC /* FTMainController.xib */,
+				6AE9446F1FDE2FCF000A3BFC /* FTInfoModel.h */,
+				6AE944701FDE2FCF000A3BFC /* FTInfoModel.m */,
 				6AE9442D1FDA810F000A3BFC /* MasterViewController.h */,
 				6AE9442E1FDA810F000A3BFC /* MasterViewController.m */,
 				6AE944301FDA810F000A3BFC /* DetailViewController.h */,
@@ -508,6 +513,7 @@
 				6AE9443D1FDA810F000A3BFC /* main.m in Sources */,
 				6AE944321FDA810F000A3BFC /* DetailViewController.m in Sources */,
 				6AE944621FDA8857000A3BFC /* ASNetworkingTools.m in Sources */,
+				6AE944711FDE2FCF000A3BFC /* FTInfoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

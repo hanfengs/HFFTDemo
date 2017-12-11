@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (IBAction)clickBtn_login:(UIButton *)sender {
@@ -36,7 +36,13 @@
         
         if (code == 0) {
             
+            UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+            
+            [self.navigationItem setBackBarButtonItem:backItem];
+            
             FTMainController *mainVC = [[FTMainController alloc] init];
+            mainVC.number = self.tf_account.text;
+            
             [self.navigationController pushViewController:mainVC animated:YES];
             
         }else if (code == 1001){

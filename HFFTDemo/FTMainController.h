@@ -10,4 +10,6 @@
 
 @interface FTMainController : UIViewController
 
+@property (nonatomic, copy) NSString *number;
+
 @end

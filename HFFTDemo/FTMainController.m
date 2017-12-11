@@ -7,6 +7,9 @@
 //
 
 #import "FTMainController.h"
+#import "ASNetworkingTools.h"
+#import "FTInfoModel.h"
+#import <NSObject+YYModel.h>
 
 @interface FTMainController ()
 
@@ -16,12 +19,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self getInfo];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)getInfo{
+    
+    
+    NSDictionary *parameterDic = @{@"phone":self.number};
+//    NSDictionary *parameterDic = @{@"phone":@"13810450981"};
+    
+    //http://vip.quxueabc.com/quxue/info?phone=13810450981
+    
+    [[ASNetworkingTools sharedTools] requestWithMethod:GET URLString:@"http://vip.quxueabc.com/quxue/info" parameters:parameterDic finished:^(id result, NSError *error) {
+        
+        FTInfoModel *data = [FTInfoModel modelWithJSON:result];
+        
+        NSLog(@"===%@===%@", data.student.name, result[@"code"]);
+        NSInteger code = [result[@"code"] integerValue];
+        
+        if (code == 0) {
+            
+            self.title = data.student.english_name;
+            
+        }else if (code == 1001){
+            
+        }else if (code == 1002){
+            
+        }else{
+            
+        }
+    }];
 }
 
 /*
