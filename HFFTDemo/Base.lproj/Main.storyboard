@@ -83,14 +83,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZT-mJ-rMs">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZT-mJ-rMs">
                                 <rect key="frame" x="112" y="301" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jVc-98-UcN"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-FP-Kl5">
                                 <rect key="frame" x="112" y="361" width="150" height="30"/>
@@ -100,14 +100,14 @@
                                     <action selector="clickBtn_login:" destination="kOz-QN-8nb" eventType="touchUpInside" id="lEs-Cm-n0e"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smK-43-8nf">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="18102029719" borderStyle="roundedRect" placeholder="账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smK-43-8nf">
                                 <rect key="frame" x="112" y="251" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mlP-bK-SeZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,6 +125,10 @@
                         <viewLayoutGuide key="safeArea" id="sa9-2E-ayC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Demo" id="6qc-ph-WQ3"/>
+                    <connections>
+                        <outlet property="tf_account" destination="smK-43-8nf" id="CDD-S3-Xrm"/>
+                        <outlet property="tf_pwd" destination="kZT-mJ-rMs" id="2Yk-MG-swA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilP-c9-ckc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

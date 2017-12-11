@@ -12,6 +12,9 @@
 
 @interface FTViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *tf_account;
+@property (weak, nonatomic) IBOutlet UITextField *tf_pwd;
+
 @end
 
 @implementation FTViewController
@@ -23,22 +26,35 @@
 
 - (IBAction)clickBtn_login:(UIButton *)sender {
     
-    NSDictionary *parameterDic = @{@"phone":@"18102029719",@"pwd":@"123456"};
+//    NSDictionary *parameterDic = @{@"phone":@"18102029719",@"pwd":@"123456"};
+    NSDictionary *parameterDic = @{@"phone":self.tf_account.text,@"pwd":self.tf_pwd.text};
     
     [[ASNetworkingTools sharedTools] requestWithMethod:POST URLString:@"http://vip.quxueabc.com/quxue/login/" parameters:parameterDic finished:^(id result, NSError *error) {
         
         NSLog(@"===%@===%@",result, result[@"code"]);
+        NSInteger code = [result[@"code"] integerValue];
+        
+        if (code == 0) {
+            
+            FTMainController *mainVC = [[FTMainController alloc] init];
+            [self.navigationController pushViewController:mainVC animated:YES];
+            
+        }else if (code == 1001){
+            
+        }else if (code == 1002){
+            
+        }else{
+            
+        }
     }];
     
-//    FTMainController *mainVC = [[FTMainController alloc] init];
-//    [self.navigationController pushViewController:mainVC animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark-
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 /*
 #pragma mark - Navigation
 
