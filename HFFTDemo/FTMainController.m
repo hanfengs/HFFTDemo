@@ -10,8 +10,14 @@
 #import "ASNetworkingTools.h"
 #import "FTInfoModel.h"
 #import <NSObject+YYModel.h>
+#import "FTWareController.h"
 
 @interface FTMainController ()
+@property (weak, nonatomic) IBOutlet UILabel *lbl_info;
+@property (weak, nonatomic) IBOutlet UIButton *btn_ware;
+@property (weak, nonatomic) IBOutlet UIButton *btn_start;
+
+@property (nonatomic, strong) FTInfoModel *model;
 
 @end
 
@@ -23,9 +29,30 @@
     
     [self getInfo];
 }
-
-- (void)getInfo{
+- (IBAction)cliclBtn_ware:(id)sender {
     
+    FTWareController *vc = [[FTWareController alloc] init];
+    vc.urlStr = self.model.next_lesson.ware_url;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)clickBtn_startClass:(id)sender {
+    
+}
+
+
+- (void)setModel:(FTInfoModel *)model{
+    _model = model;
+    
+    self.title = model.student.english_name;
+    
+    if (model.has_next_lesson == YES) {
+        self.lbl_info.text = [NSString stringWithFormat:@"您下一次课时间是%@(%@) %@",model.next_lesson.start_date, model.next_lesson.start_day_chinese, model.next_lesson.start_time];
+        self.btn_ware.hidden = NO;
+        self.btn_start.hidden = NO;
+    }
+}
+- (void)getInfo{
     
     NSDictionary *parameterDic = @{@"phone":self.number};
 //    NSDictionary *parameterDic = @{@"phone":@"13810450981"};
@@ -41,8 +68,7 @@
         
         NSInteger code = [data.code integerValue];
         if (code == 0) {
-        
-            self.title = data.student.english_name;
+            self.model = data;
             
         }else if (code == 1001){
             

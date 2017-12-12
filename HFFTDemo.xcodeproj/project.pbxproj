@@ -27,6 +27,8 @@
 		6AE944711FDE2FCF000A3BFC /* FTInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944701FDE2FCF000A3BFC /* FTInfoModel.m */; };
 		6AE944741FDE6FA7000A3BFC /* FTCourses.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944731FDE6FA7000A3BFC /* FTCourses.m */; };
 		6AE944771FDE74C3000A3BFC /* FTLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944761FDE74C3000A3BFC /* FTLesson.m */; };
+		6AE9447B1FDE9069000A3BFC /* FTWareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944791FDE9069000A3BFC /* FTWareController.m */; };
+		6AE9447C1FDE9069000A3BFC /* FTWareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE9447A1FDE9069000A3BFC /* FTWareController.xib */; };
 		F3B2AB0B1CADC875E9CC6F92 /* libPods-HFFTDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,9 @@
 		6AE944731FDE6FA7000A3BFC /* FTCourses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCourses.m; sourceTree = "<group>"; };
 		6AE944751FDE74C3000A3BFC /* FTLesson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLesson.h; sourceTree = "<group>"; };
 		6AE944761FDE74C3000A3BFC /* FTLesson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLesson.m; sourceTree = "<group>"; };
+		6AE944781FDE9069000A3BFC /* FTWareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTWareController.h; sourceTree = "<group>"; };
+		6AE944791FDE9069000A3BFC /* FTWareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTWareController.m; sourceTree = "<group>"; };
+		6AE9447A1FDE9069000A3BFC /* FTWareController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTWareController.xib; sourceTree = "<group>"; };
 		88FBA73BCA0B61F58EAA00DC /* Pods-HFFTDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9440DE4B1CA03D79110B7B89 /* Pods-HFFTDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemo/Pods-HFFTDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +159,9 @@
 				6AE944681FDBD6AF000A3BFC /* FTMainController.h */,
 				6AE944691FDBD6AF000A3BFC /* FTMainController.m */,
 				6AE9446A1FDBD6AF000A3BFC /* FTMainController.xib */,
+				6AE944781FDE9069000A3BFC /* FTWareController.h */,
+				6AE944791FDE9069000A3BFC /* FTWareController.m */,
+				6AE9447A1FDE9069000A3BFC /* FTWareController.xib */,
 				6AE9446F1FDE2FCF000A3BFC /* FTInfoModel.h */,
 				6AE944701FDE2FCF000A3BFC /* FTInfoModel.m */,
 				6AE944721FDE6FA7000A3BFC /* FTCourses.h */,
@@ -345,6 +353,7 @@
 				6AE9446C1FDBD6AF000A3BFC /* FTMainController.xib in Resources */,
 				6AE944671FDBD102000A3BFC /* FTViewController.xib in Resources */,
 				6AE944351FDA810F000A3BFC /* Main.storyboard in Resources */,
+				6AE9447C1FDE9069000A3BFC /* FTWareController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +529,7 @@
 				6AE944771FDE74C3000A3BFC /* FTLesson.m in Sources */,
 				6AE9442F1FDA810F000A3BFC /* MasterViewController.m in Sources */,
 				6AE9446B1FDBD6AF000A3BFC /* FTMainController.m in Sources */,
+				6AE9447B1FDE9069000A3BFC /* FTWareController.m in Sources */,
 				6AE9442C1FDA810F000A3BFC /* AppDelegate.m in Sources */,
 				6AE944661FDBD102000A3BFC /* FTViewController.m in Sources */,
 				6AE9443D1FDA810F000A3BFC /* main.m in Sources */,
