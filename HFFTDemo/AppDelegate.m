@@ -8,8 +8,16 @@
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import <MobileRTC/MobileRTC.h>
 
-@interface AppDelegate () <UISplitViewControllerDelegate>
+#define kZoomSDKAppKey      @"v3XQK422HF76heLI11rXdMIAPhN5HFKDuS0x"
+#define kZoomSDKAppSecret   @"58kFpYYLqOA70U2DLlX99BQMjFTtmaA6odoi"
+#define kZoomSDKDomain      @"zoom.us"
+
+#define kZoomSDKEmail       @""
+#define kZoomSDKPassword    @""
+
+@interface AppDelegate () <UISplitViewControllerDelegate, MobileRTCAuthDelegate, UIAlertViewDelegate, MobileRTCPremeetingDelegate>
 
 @end
 
@@ -17,6 +25,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSLog(@"MobileRTC Version: %@", [[MobileRTC sharedRTC] mobileRTCVersion]);
+    //1. Set MobileRTC Domain
+    [[MobileRTC sharedRTC] setMobileRTCDomain:kZoomSDKDomain];
+    
+    [self sdkAuth];
+    
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
@@ -64,4 +79,85 @@
     }
 }
 
+#pragma mark - Auth Delegate
+
+- (void)sdkAuth
+{
+    MobileRTCAuthService *authService = [[MobileRTC sharedRTC] getAuthService];
+    if (authService)
+    {
+        authService.delegate = self;
+        
+        authService.clientKey = kZoomSDKAppKey;
+        authService.clientSecret = kZoomSDKAppSecret;
+        
+        [authService sdkAuth];
+    }
+}
+
+- (void)onMobileRTCAuthReturn:(MobileRTCAuthError)returnValue
+{
+    NSLog(@"onMobileRTCAuthReturn %d", returnValue);
+    
+    if (returnValue != MobileRTCAuthError_Success)
+    {
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"SDK authentication failed, error code: %zd", @""), returnValue];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:NSLocalizedString(@"Retry", @""), nil];
+        [alert show];
+        
+    }else{
+        MobileRTCAuthService *authService = [[MobileRTC sharedRTC] getAuthService];
+        if (authService)
+        {
+            [authService loginWithEmail:kZoomSDKEmail password:kZoomSDKPassword];
+        }
+    }
+}
+
+- (void)onMobileRTCLoginReturn:(NSInteger)returnValue
+{
+    NSLog(@"onMobileRTCLoginReturn result=%zd", returnValue);
+    
+    MobileRTCPremeetingService *service = [[MobileRTC sharedRTC] getPreMeetingService];
+    if (service)
+    {
+        service.delegate = self;
+    }
+}
+
+- (void)onMobileRTCLogoutReturn:(NSInteger)returnValue
+{
+    NSLog(@"onMobileRTCLogoutReturn result=%zd", returnValue);
+}
+
+#pragma mark - AlertView Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != alertView.cancelButtonIndex)
+    {
+        [self performSelector:@selector(sdkAuth) withObject:nil afterDelay:0.f];
+    }
+}
+
+#pragma mark - Premeeting Delegate
+- (void)sinkSchedultMeeting:(PreMeetingError)result meetingNumber:(unsigned long long)number
+{
+    NSLog(@"sinkSchedultMeeting result: %zd, meetingNumber:%zd", result, number);
+}
+
+- (void)sinkEditMeeting:(PreMeetingError)result
+{
+    NSLog(@"sinkEditMeeting result: %zd", result);
+}
+
+- (void)sinkDeleteMeeting:(PreMeetingError)result
+{
+    NSLog(@"sinkDeleteMeeting result: %zd", result);
+}
+
+- (void)sinkListMeeting:(PreMeetingError)result withMeetingItems:(NSArray*)array
+{
+    NSLog(@"sinkListMeeting result: %zd  items: %@", result, array);
+}
 @end

@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"课件";
     
 //    NSURL *url = [NSURL URLWithString:@"http://47.95.38.15/gm/login.html"];//http://47.95.38.15/gm/login.html
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]];

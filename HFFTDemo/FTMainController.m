@@ -12,7 +12,9 @@
 #import <NSObject+YYModel.h>
 #import "FTWareController.h"
 
-@interface FTMainController ()
+#import <MobileRTC/MobileRTC.h>
+
+@interface FTMainController ()<MobileRTCMeetingServiceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lbl_info;
 @property (weak, nonatomic) IBOutlet UIButton *btn_ware;
 @property (weak, nonatomic) IBOutlet UIButton *btn_start;
@@ -29,6 +31,8 @@
     
     [self getInfo];
 }
+
+#pragma mark-
 - (IBAction)cliclBtn_ware:(id)sender {
     
     FTWareController *vc = [[FTWareController alloc] init];
@@ -38,9 +42,10 @@
 }
 - (IBAction)clickBtn_startClass:(id)sender {
     
+    [self joinMeeting:self.model.next_lesson.meeting_id WithUserName:self.model.student.english_name];
 }
 
-
+#pragma mark-
 - (void)setModel:(FTInfoModel *)model{
     _model = model;
     
@@ -79,6 +84,73 @@
         }
     }];
 }
+
+#pragma mark-
+- (void)joinMeeting:(NSString*)meetingNo WithUserName:(NSString *)userName{
+    if (![meetingNo length])
+    return;
+    
+    MobileRTCMeetingService *ms = [[MobileRTC sharedRTC] getMeetingService];
+    if (ms){
+        
+        NSString *title = [NSString stringWithFormat:@"房间号：%@",meetingNo];
+        [ms customizeMeetingTitle:title];
+        ms.delegate = self;
+        
+        NSDictionary *paramDict = @{
+                                    kMeetingParam_Username:userName,
+                                    kMeetingParam_MeetingNumber:meetingNo,
+                                    
+                                    };
+        
+        MobileRTCMeetError ret = [ms joinMeetingWithDictionary:paramDict];
+        NSLog(@"onJoinaMeeting ret:%d", ret);
+        
+        //        UIView *meetView = [ms meetingView];
+        //        meetView.frame = CGRectMake(0, 0, 200, 200);
+        //        [self.view addSubview:meetView];
+    }
+}
+
+
+#pragma mark- delegate
+
+//- (void)onJBHWaitingWithCmd:(JBHCmd)cmd{
+//
+//    NSLog(@"%d",JBHCmd_Hide);
+//}
+
+- (void)onClickedInviteButton:(UIViewController*)parentVC{
+    
+    NSLog(@"%@",parentVC);
+}
+
+- (void)onAppShareSplash{
+    
+}
+
+- (void)onClickedShareButton{
+    
+}
+
+- (void)onMeetingStateChange:(MobileRTCMeetingState)state{
+    
+    NSLog(@"======%u",state);
+    
+    if (state == MobileRTCMeetingState_Idle) {
+        //        [self showAlert];
+        
+        self.lbl_info.text = [NSString stringWithFormat:@"用户%@,%@结束了视频", self.model.student.name, [self getCurrentTime]];//@"用户结束了视频";
+    }
+}
+
+- (NSString *)getCurrentTime {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    NSString *dateTime = [formatter stringFromDate:[NSDate date]];
+    return dateTime;
+}
+
 
 /*
 #pragma mark - Navigation
