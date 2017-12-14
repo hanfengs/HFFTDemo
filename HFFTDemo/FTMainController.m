@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn_start;
 
 @property (nonatomic, strong) FTInfoModel *model;
+@property (nonatomic, strong) UIButton *btn_help;
 
 @end
 
@@ -29,7 +30,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    
     [self getInfo];
+}
+
+- (void)OrientationDidChange:(NSNotification *)notification{
+    
+    CGFloat x = [UIScreen mainScreen].bounds.size.width - 80;
+    self.btn_help.frame = CGRectMake(x, 64, 80, 50);
+
 }
 
 #pragma mark-
@@ -140,8 +150,32 @@
     if (state == MobileRTCMeetingState_Idle) {
         //        [self showAlert];
         
-        self.lbl_info.text = [NSString stringWithFormat:@"用户%@,%@结束了视频", self.model.student.name, [self getCurrentTime]];//@"用户结束了视频";
+        //@"用户结束了视频";
+        self.lbl_info.text = [NSString stringWithFormat:@"用户%@,%@结束了视频", self.model.student.name, [self getCurrentTime]];
+        
+    }else if (state == MobileRTCMeetingState_InMeeting){
+        MobileRTCMeetingService *ms = [[MobileRTC sharedRTC] getMeetingService];
+        UIView *view = [ms meetingView];
+        
+        CGFloat x = [UIScreen mainScreen].bounds.size.width - 80;
+        
+        UIButton *helpBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, 64, 80, 50)];
+        [helpBtn setTitle:@"HELP" forState:UIControlStateNormal];
+        if (@available(iOS 11.0, *)) {
+            helpBtn.backgroundColor = [UIColor colorNamed:@"help_color"];
+        } else {
+            // Fallback on earlier versions
+        }
+        [helpBtn addTarget:self action:@selector(clickBtn_help) forControlEvents:UIControlEventTouchUpInside];
+        self.btn_help = helpBtn;
+        [view addSubview:helpBtn];
+        
+    }else if (state == MobileRTCMeetingState_Connecting){
     }
+    
+}
+- (void)clickBtn_help{
+
 }
 
 - (NSString *)getCurrentTime {
