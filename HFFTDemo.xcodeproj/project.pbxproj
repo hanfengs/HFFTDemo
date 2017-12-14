@@ -18,6 +18,8 @@
 		6ADEEA1D1FE0C42C0058236C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADEEA1C1FE0C42C0058236C /* libz.1.2.5.tbd */; };
 		6ADEEA1F1FE0C4350058236C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADEEA1E1FE0C4350058236C /* VideoToolbox.framework */; };
 		6ADEEA211FE0C5BB0058236C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADEEA201FE0C5BB0058236C /* CoreBluetooth.framework */; };
+		6ADEEA2E1FE25FBC0058236C /* FTHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEEA2D1FE25FBC0058236C /* FTHelpView.m */; };
+		6ADEEA301FE25FD30058236C /* FTHelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADEEA2F1FE25FD30058236C /* FTHelpView.xib */; };
 		6AE9442C1FDA810F000A3BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9442B1FDA810F000A3BFC /* AppDelegate.m */; };
 		6AE9442F1FDA810F000A3BFC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE9442E1FDA810F000A3BFC /* MasterViewController.m */; };
 		6AE944321FDA810F000A3BFC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE944311FDA810F000A3BFC /* DetailViewController.m */; };
@@ -73,6 +75,9 @@
 		6ADEEA1C1FE0C42C0058236C /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		6ADEEA1E1FE0C4350058236C /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		6ADEEA201FE0C5BB0058236C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		6ADEEA2C1FE25FBC0058236C /* FTHelpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTHelpView.h; sourceTree = "<group>"; };
+		6ADEEA2D1FE25FBC0058236C /* FTHelpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTHelpView.m; sourceTree = "<group>"; };
+		6ADEEA2F1FE25FD30058236C /* FTHelpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTHelpView.xib; sourceTree = "<group>"; };
 		6AE944271FDA810F000A3BFC /* HFFTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFFTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE9442A1FDA810F000A3BFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AE9442B1FDA810F000A3BFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,6 +215,9 @@
 				6AE9442E1FDA810F000A3BFC /* MasterViewController.m */,
 				6AE944301FDA810F000A3BFC /* DetailViewController.h */,
 				6AE944311FDA810F000A3BFC /* DetailViewController.m */,
+				6ADEEA2C1FE25FBC0058236C /* FTHelpView.h */,
+				6ADEEA2D1FE25FBC0058236C /* FTHelpView.m */,
+				6ADEEA2F1FE25FD30058236C /* FTHelpView.xib */,
 				6AE944331FDA810F000A3BFC /* Main.storyboard */,
 				6AE944361FDA810F000A3BFC /* Assets.xcassets */,
 				6AE944381FDA810F000A3BFC /* LaunchScreen.storyboard */,
@@ -396,6 +404,7 @@
 				6AE944371FDA810F000A3BFC /* Assets.xcassets in Resources */,
 				6AE9446C1FDBD6AF000A3BFC /* FTMainController.xib in Resources */,
 				6AE944671FDBD102000A3BFC /* FTViewController.xib in Resources */,
+				6ADEEA301FE25FD30058236C /* FTHelpView.xib in Resources */,
 				6ADEEA161FDFD9160058236C /* MobileRTCResources.bundle in Resources */,
 				6ADEEA141FDFD9160058236C /* Localizable.strings in Resources */,
 				6AE944351FDA810F000A3BFC /* Main.storyboard in Resources */,
@@ -573,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AE944741FDE6FA7000A3BFC /* FTCourses.m in Sources */,
+				6ADEEA2E1FE25FBC0058236C /* FTHelpView.m in Sources */,
 				6AE944771FDE74C3000A3BFC /* FTLesson.m in Sources */,
 				6AE9442F1FDA810F000A3BFC /* MasterViewController.m in Sources */,
 				6AE9446B1FDBD6AF000A3BFC /* FTMainController.m in Sources */,

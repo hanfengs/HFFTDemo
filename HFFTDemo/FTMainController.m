@@ -13,6 +13,10 @@
 #import "FTWareController.h"
 
 #import <MobileRTC/MobileRTC.h>
+#import "FTHelpView.h"
+
+#define kMainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KMainScreenHeight [UIScreen mainScreen].bounds.size.height
 
 @interface FTMainController ()<MobileRTCMeetingServiceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lbl_info;
@@ -21,6 +25,7 @@
 
 @property (nonatomic, strong) FTInfoModel *model;
 @property (nonatomic, strong) UIButton *btn_help;
+@property (nonatomic, strong) FTHelpView *view_help;
 
 @end
 
@@ -38,8 +43,9 @@
 - (void)OrientationDidChange:(NSNotification *)notification{
     
     CGFloat x = [UIScreen mainScreen].bounds.size.width - 80;
-    self.btn_help.frame = CGRectMake(x, 64, 80, 50);
+    self.btn_help.frame = CGRectMake(x, 20, 80, 50);
 
+    self.view_help.frame = CGRectMake(kMainScreenWidth - 200, 20, 200, KMainScreenHeight - 64 - 49);
 }
 
 #pragma mark-
@@ -101,6 +107,13 @@
     return;
     
     MobileRTCMeetingService *ms = [[MobileRTC sharedRTC] getMeetingService];
+    
+//    [[MobileRTC sharedRTC] getMeetingSettings].meetingShareHidden = YES;
+//    [[MobileRTC sharedRTC] getMeetingSettings].meetingParticipantHidden = YES;
+    
+    [[MobileRTC sharedRTC] getMeetingSettings].topBarHidden = YES;
+    [[MobileRTC sharedRTC] getMeetingSettings].bottomBarHidden = YES;
+    
     if (ms){
         
         NSString *title = [NSString stringWithFormat:@"房间号：%@",meetingNo];
@@ -159,7 +172,7 @@
         
         CGFloat x = [UIScreen mainScreen].bounds.size.width - 80;
         
-        UIButton *helpBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, 64, 80, 50)];
+        UIButton *helpBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, 20, 80, 50)];
         [helpBtn setTitle:@"HELP" forState:UIControlStateNormal];
         if (@available(iOS 11.0, *)) {
             helpBtn.backgroundColor = [UIColor colorNamed:@"help_color"];
@@ -176,6 +189,24 @@
 }
 - (void)clickBtn_help{
 
+    MobileRTCMeetingService *ms = [[MobileRTC sharedRTC] getMeetingService];
+    UIView *view = [ms meetingView];
+    
+    [view addSubview:self.view_help];
+}
+
+- (FTHelpView *)view_help{
+
+    if(_view_help == nil){
+        _view_help = [[[NSBundle mainBundle] loadNibNamed:@"FTHelpView" owner:nil options:nil] lastObject];
+        if (@available(iOS 11.0, *)) {
+            _view_help.backgroundColor = [UIColor colorNamed:@"help_color"];
+        } else {
+            // Fallback on earlier versions
+        }
+        _view_help.frame = CGRectMake(kMainScreenWidth - 200, 20, 200, KMainScreenHeight - 64 - 49);
+    }
+    return _view_help;
 }
 
 - (NSString *)getCurrentTime {
@@ -185,7 +216,12 @@
     return dateTime;
 }
 
+#pragma mark-
 
+//全球拨入国家,在邀请邮件中显示国际号码链接,Dial-in 
+- (void)onDialOutStatusChanged:(DialOutStatus)status{
+    NSLog(@"=======%u", status);
+}
 /*
 #pragma mark - Navigation
 
