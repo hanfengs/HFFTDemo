@@ -211,7 +211,8 @@
 
 - (NSString *)getCurrentTime {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    formatter.locale = [NSLocale localeWithLocaleIdentifier:@"en"];
+    [formatter setDateFormat:@"EEEE yyyy-MM-dd hh:mm:ss"];
     NSString *dateTime = [formatter stringFromDate:[NSDate date]];
     return dateTime;
 }
