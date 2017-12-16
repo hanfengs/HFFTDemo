@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		308A739DEC65DC2E8615F931 /* libPods-HFFTDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5EBA560897AA3C644168F8 /* libPods-HFFTDemoUITests.a */; };
 		67649F4FF14B8E0AA9B31B9E /* libPods-HFFTDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF9ECF8C877DC0CDA23447C /* libPods-HFFTDemo.a */; };
+		6A4F06951FE3CD04000BA5F7 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4F06941FE3CD04000BA5F7 /* QuickLook.framework */; };
 		6ADEEA141FDFD9160058236C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6ADEEA0C1FDFD9160058236C /* Localizable.strings */; };
 		6ADEEA151FDFD9160058236C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6ADEEA0E1FDFD9160058236C /* InfoPlist.strings */; };
 		6ADEEA161FDFD9160058236C /* MobileRTCResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6ADEEA121FDFD9160058236C /* MobileRTCResources.bundle */; };
@@ -64,6 +65,7 @@
 		36C91E364D5E98FA7FF059E4 /* libPods-HFFTDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA60776C5F10870F3A839B1 /* Pods-HFFTDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFFTDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFFTDemoTests/Pods-HFFTDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		5DF9ECF8C877DC0CDA23447C /* libPods-HFFTDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HFFTDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4F06941FE3CD04000BA5F7 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		6ADEEA0D1FDFD9160058236C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6ADEEA0F1FDFD9160058236C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		6ADEEA101FDFD9160058236C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A4F06951FE3CD04000BA5F7 /* QuickLook.framework in Frameworks */,
 				6ADEEA211FE0C5BB0058236C /* CoreBluetooth.framework in Frameworks */,
 				6ADEEA1F1FE0C4350058236C /* VideoToolbox.framework in Frameworks */,
 				6ADEEA1D1FE0C42C0058236C /* libz.1.2.5.tbd in Frameworks */,
@@ -258,6 +261,7 @@
 		BF6F6E364FCB3FE00F286427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A4F06941FE3CD04000BA5F7 /* QuickLook.framework */,
 				6ADEEA201FE0C5BB0058236C /* CoreBluetooth.framework */,
 				6ADEEA1E1FE0C4350058236C /* VideoToolbox.framework */,
 				6ADEEA1C1FE0C42C0058236C /* libz.1.2.5.tbd */,
