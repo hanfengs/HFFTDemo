@@ -111,7 +111,7 @@
 //    [[MobileRTC sharedRTC] getMeetingSettings].meetingShareHidden = YES;
 //    [[MobileRTC sharedRTC] getMeetingSettings].meetingParticipantHidden = YES;
     
-    [[MobileRTC sharedRTC] getMeetingSettings].topBarHidden = YES;
+    [[MobileRTC sharedRTC] getMeetingSettings].topBarHidden = NO;
     [[MobileRTC sharedRTC] getMeetingSettings].bottomBarHidden = YES;
     
     if (ms){
