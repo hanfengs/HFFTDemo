@@ -58,7 +58,11 @@
 }
 - (IBAction)clickBtn_startClass:(id)sender {
     
-    [self joinMeeting:self.model.next_lesson.meeting_id WithUserName:self.model.student.english_name];
+    if (self.model.has_next_lesson) {
+        [self joinMeeting:self.model.next_lesson.meeting_id WithUserName:self.model.student.english_name];
+    }else{
+        [self joinMeeting:@"7564544700" WithUserName:@"默认"];
+    }
 }
 
 #pragma mark-
@@ -70,6 +74,9 @@
     if (model.has_next_lesson == YES) {
         self.lbl_info.text = [NSString stringWithFormat:@"您下一次课时间是%@(%@) %@",model.next_lesson.start_date, model.next_lesson.start_day_chinese, model.next_lesson.start_time];
         self.btn_ware.hidden = NO;
+        self.btn_start.hidden = NO;
+    }else{
+        self.lbl_info.text = @"暂无下一次课时间";
         self.btn_start.hidden = NO;
     }
 }

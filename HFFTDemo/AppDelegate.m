@@ -10,8 +10,8 @@
 #import "DetailViewController.h"
 #import <MobileRTC/MobileRTC.h>
 
-#define kZoomSDKAppKey      @"v3XQK422HF76heLI11rXdMIAPhN5HFKDuS0x"
-#define kZoomSDKAppSecret   @"58kFpYYLqOA70U2DLlX99BQMjFTtmaA6odoi"
+#define kZoomSDKAppKey      @"ftHcJJuSsdfeMXub40Ln2oc8PpkcdFV2ImFr"
+#define kZoomSDKAppSecret   @"dDGQVO5aOl2oncHnPWY2OZZsvWx8Uutzbc2T"
 #define kZoomSDKDomain      @"zoom.us"
 
 #define kZoomSDKEmail       @""
